@@ -35,15 +35,13 @@ const FilterSidebar = () => {
     }
   ];
 
-  const checkboxGroups = options.map(
-    ({ title, value }, i) => <CheckboxGroup key={i} title={title} value={value} />
-  );
+  const checkboxGroups = options.map((props, i) => <CheckboxGroup key={i} {...props} />);
 
   return (
     <aside className="sidebar-wrapper">
       <div className="heading-btn">
         <h3>Filter</h3>
-        <button className="text">Clear</button>
+        <button className="text-btn">Clear</button>
       </div>
       <h6 className="upper">Price</h6>
       <div className="select-wrapper">

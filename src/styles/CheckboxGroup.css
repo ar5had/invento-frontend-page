@@ -1,13 +1,14 @@
 .checkbox-group-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: var(--gap-lg);
 }
 
-label {
+.checkbox-group-wrapper label {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin-bottom: var(--gap-sm);
 }
 
 label > input {
-    margin-right: 15px;
+    margin-right: calc(var(--gap-md) + 2px);
+    margin-left: calc(var(--gap-xs) / 2);
 }

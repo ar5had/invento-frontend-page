@@ -1,12 +1,26 @@
 .content-nav {
-    display: flex;
+    display: grid;
+    grid-gap: var(--gap-md);
+    grid-template-columns: repeat(4, auto) 1fr;
 }
 
-.content-nav .flex-end {
-    margin-left: auto;
+.content-nav .side-filter {
+    --icon-margin: calc(var(--gap-md) - 3px);
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.flex-end select {
-    margin-right: 30px;
+.side-filter label {
+    margin-right: var(--gap-sm);
+}
+
+.side-filter .select-with-icon span {
+    right: var(--icon-margin);
+}
+
+.side-filter select {
+    margin-right: calc(var(--gap-md) + var(--icon-margin) + 11px);
+    padding-left: 0;
+    padding-right: 0;
 }

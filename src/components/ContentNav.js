@@ -8,7 +8,7 @@ const ContentNav = () => {
       <button className="nav-button">Live Auction</button>
       <button className="nav-button">Elegible for Auction</button>
       <button className="nav-button">Buy now only</button>
-      <div className="flex-end">
+      <div className="side-filter">
         <label>Sort By:</label>
         <div className="select-with-icon">
           <select className="clear">

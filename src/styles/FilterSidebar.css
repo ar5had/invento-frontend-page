@@ -1,18 +1,16 @@
 .sidebar-wrapper {
     width: 250px;
-    margin-right: 40px;
+    margin-right: var(--gap-xl);
 }
 
 .select-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--gap-sm);
     justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.select-wrapper .select-with-icon {
-    flex: 0 1 calc(50% - 6px);
+    margin-bottom: var(--gap-lg);
 }
 
 .sidebar-wrapper h6 {
-    margin-bottom: 5px;
+    margin-bottom: calc(var(--gap-sm) + var(--gap-xs));
 }

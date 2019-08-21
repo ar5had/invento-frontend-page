@@ -1,3 +1,28 @@
+/* Importing fonts */
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-Bold.ttf);
+  font-weight: 700;
+}
+
 /* CSS Reset */
 html,
 body,
@@ -131,10 +156,8 @@ table {
 }
 
 /* Global styles */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
-
 :root {
-  --font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family: Gilroy, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --primary-color: #0A1F44;
   --secondary-color: #8A94A6;
   --off-primary-color: #4E5D78;
@@ -142,11 +165,19 @@ table {
   --border-color: #E1E4E8;
   --nav-btn-bkd: #f1f2f4;
   --white: #fff;
+  --gap-xs: 4px;
+  --gap-sm: 8px;
+  --gap-md: 16px;
+  --gap-lg: 32px;
+  --gap-xl: 64px;
+  --card-width: 296px;
+  --cards-in-row: 3;
+  --shadow: 0 1px 1px 0 rgba(10, 22, 70, 0.10), 0 0 1px 0 rgba(10, 22, 70, 0.06);
+  --shadow-btn: 0 0 2px 1px rgba(10, 22, 70, 0.12);
 }
 
 html {
   box-sizing: border-box;
-  font-size: 15px;
   font-family: var(--font-family);
   color: var(--primary-color);
   text-rendering: optimizeLegibility;
@@ -184,13 +215,12 @@ h6 {
   color: var(--off-primary-color);
 }
 
-select, button {
-  border-radius: 4px;
-  padding: 10px;
-}
-
 button {
-  font-weight: 600;
+  font-weight: 500;
+  border-radius: 4px;
+  line-height: 24px;
+  font-size: 14px;
+  padding: var(--gap-sm);
 }
 
 button:hover {
@@ -199,16 +229,6 @@ button:hover {
 
 button:active, button:focus {
   outline: none;
-}
-
-button.text {
-  font-size: 12px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: var(--green);
-  background: none;
-  padding: 0;
-  border: none;
 }
 
 label input + span {
@@ -231,37 +251,37 @@ select {
   background-color: transparent;
   color: var(--secondary-color);
   font-size: 14px;
-  line-height: 1;
+  line-height: 24px;
   border: solid 1px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   font-weight: 500;
-}
-
-option {
-  padding: 20px;
+  padding: var(--gap-xs) calc(var(--gap-sm) + var(--gap-xs));
+  border-radius: 4px;
 }
 
 /** global class selectors */
-.heading-btn {
-  display: flex;
-  border-bottom: solid 1px var(--border-color);
-  padding-bottom: 5px;
-  margin-bottom: 30px;
-}
-
-.heading-btn > h3 {
-  flex: 1;
-  margin-right: 5px;
-}
-
 .border-bottom {
   border-bottom: solid 1px var(--border-color);
 }
 
 .upper {
   text-transform: uppercase;
+}
+
+.primary {
+  color: var(--green);
+}
+
+.heading-btn {
+  display: flex;
+  border-bottom: solid 1px var(--border-color);
+  padding-bottom: var(--gap-sm);
+  margin-bottom: 32px;
+}
+
+.heading-btn > h3 {
+  flex: 1;
+  margin-right: 5px;
 }
 
 select.clear {
@@ -276,8 +296,8 @@ select.clear {
 .select-with-icon span {
   position: absolute;
   top: 50%;
-  right: 15px;
-  font-size: 7px;
+  right: calc(var(--gap-md) + 1px);
+  font-size: 6px;
   transform: scaleX(2) translateY(-50%)
 }
 
@@ -291,31 +311,34 @@ select.clear {
   border-radius: 160px;
   color: var(--off-primary-color);
   font-size: 14px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0;
 }
 
 .nav-button.active {
   color: var(--primary-color);
   background: var(--nav-btn-bkd);
   font-weight: 600;
+  padding: var(--gap-xs) var(--gap-md);
 }
 
-.hollow {
-  background: transparent;
-}
-
-button.primary {
-  font-size: 13px;
-}
-
-.primary {
+.text-btn {
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
   color: var(--green);
-  border: solid 1px;
+  background: none;
+  padding: 0;
+  border: none;
+  font-weight: 600;
 }
 
-.full-width {
-  width: 100%;
+.hollow-btn {
+  --pad: calc(var(--gap-sm) + var(--gap-xs) - 1px);
+  background: transparent;
+  border: solid 1px;
+  padding-top: var(--pad);
+  padding-bottom: var(--pad);
+  font-size: 14px;
 }
 
 .primary-btn {
@@ -325,10 +348,16 @@ button.primary {
 
 .secondary-btn {
   color: var(--primary-color);
+  background: transparent;
 }
 
 .inactive-btn {
   background: #009eeb;
   color: var(--white);
   text-transform: uppercase;
+}
+
+.primary-btn, .secondary-btn, .inactive-btn {
+  border: none;
+  box-shadow: var(--shadow-btn);
 }

@@ -20,7 +20,7 @@ const Content = () => {
       msrp: '$500',
       units: 20,
       isSoldOut: false,
-      isLive: true,
+      styleClass: 'live'
     },
     {
       image: img2,
@@ -33,12 +33,12 @@ const Content = () => {
       msrp: '$4000',
       units: 346,
       isSoldOut: false,
-      isLive: false,
+      styleClass: 'auction'
     },
     {
       image: img3,
       tag: null,
-      viewCount: 435,
+      viewCount: null,
       timeLeft: null,
       type: 'Newly Listed',
       title: 'Speakers, LED Lights, DVD Players, Printers, and More Electronics…',
@@ -46,7 +46,7 @@ const Content = () => {
       msrp: '$12000',
       units: 60,
       isSoldOut: true,
-      isLive: false,
+      styleClass: 'new'
     },
   ];
 
@@ -55,13 +55,13 @@ const Content = () => {
   );
 
   return (
-    <div className="content-wrapper">
+    <section className="content-wrapper">
       <ContentNav />
       <div className="cards-wrapper">
         {cards}
       </div>
-      <button className="hollow primary full-width">Load more</button>
-    </div>
+      <button className="hollow-btn primary full-width">Load more</button>
+    </section>
   );
 };
 

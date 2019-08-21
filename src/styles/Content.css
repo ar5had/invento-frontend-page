@@ -1,15 +1,18 @@
 .content-wrapper {
+    --margin-offset: calc(var(--cards-in-row) - 1);
+    --card-gap : calc(var(--margin-offset) * var(--gap-md));
     flex: 1;
-    max-width: calc(296px * 3 + 40px);
+    max-width: calc(var(--card-width) * 3 + var(--card-gap));
+}
+
+.content-wrapper .full-width {
+    width: 100%;
 }
 
 .cards-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    grid-gap: 20px;
-    margin: 40px 0;
-}
-
-.card:last-of-type {
-    margin-right: 0;
+    display: grid;
+    grid-template-columns: repeat(3, var(--card-width));
+    grid-gap: var(--gap-md);
+    margin-top: var(--gap-lg);
+    margin-bottom: calc(var(--gap-xl) + var(--gap-lg));
 }
