@@ -1,0 +1,12 @@
+.content-nav {
+    display: flex;
+}
+
+.content-nav .flex-end {
+    margin-left: auto;
+    display: flex;
+}
+
+.flex-end select {
+    margin-right: 30px;
+}

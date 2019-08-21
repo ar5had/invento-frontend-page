@@ -1,4 +1,15 @@
 .content-wrapper {
     flex: 1;
-    background: #aaa;
+    max-width: calc(296px * 3 + 40px);
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    margin: 40px 0;
+}
+
+.card:last-of-type {
+    margin-right: 0;
 }
