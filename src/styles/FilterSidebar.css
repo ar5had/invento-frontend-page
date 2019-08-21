@@ -1,0 +1,18 @@
+.sidebar-wrapper {
+    width: 250px;
+    margin-right: 30px;
+}
+
+.select-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.select-wrapper .select-with-icon {
+    flex: 0 1 calc(50% - 6px);
+}
+
+.sidebar-wrapper h6 {
+    margin-bottom: 5px;
+}

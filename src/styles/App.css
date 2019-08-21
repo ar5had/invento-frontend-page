@@ -1,0 +1,7 @@
+.app {
+    display: flex;
+}
+
+.sidebar-wrapper, .content-wrapper {
+    min-height: 400px;
+}

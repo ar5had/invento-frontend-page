@@ -1,11 +1,15 @@
 import React from 'react';
+import FilterSidebar from './FilterSidebar';
+import Content from './Content';
 import '../styles/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div className="app">
+      <FilterSidebar />
+      <Content />
     </div>
   );
-}
+};
 
 export default App;
