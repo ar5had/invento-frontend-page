@@ -20,7 +20,6 @@
 }
 
 .side-filter select {
-    margin-right: calc(var(--gap-md) + var(--icon-margin) + 11px);
+    padding-right: calc(var(--gap-md) + var(--icon-margin) + 11px);
     padding-left: 0;
-    padding-right: 0;
 }

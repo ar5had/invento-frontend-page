@@ -209,9 +209,6 @@ h6 {
   font-size: 12px;
   line-height: 20px;
   font-weight: 700;
-}
-
-h6 {
   color: var(--off-primary-color);
 }
 
@@ -252,7 +249,7 @@ select {
   color: var(--secondary-color);
   font-size: 14px;
   line-height: 24px;
-  border: solid 1px;
+  border: solid 1px var(--border-color);
   appearance: none;
   font-weight: 500;
   padding: var(--gap-xs) calc(var(--gap-sm) + var(--gap-xs));

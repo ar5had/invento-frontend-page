@@ -14,3 +14,7 @@
 .sidebar-wrapper h6 {
     margin-bottom: calc(var(--gap-sm) + var(--gap-xs));
 }
+
+.sidebar-wrapper .upper {
+    margin-bottom: var(--gap-xs);
+}
